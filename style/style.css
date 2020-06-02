@@ -26,3 +26,57 @@
 	font-family: "CherrySwash";
 	src: url(../fonts/CherrySwash-Regular.otf);
 }
+/* Обёртки и шаблоны */
+.wrap {
+	height: 100%;
+	width: 100%;
+}
+.container {
+	max-width: 986px;
+	margin: 0 auto;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
+/* Header */
+header {
+	background-color: #4c97a2;
+}
+.header-row .logo {
+	font-family: "CherrySwash";
+	font-size: 40px;
+	color: #ffffff;
+	padding: 27px 16px 27px 16px;
+}
+.header-row {
+	display: flex;
+	justify-content: space-between;
+}
+nav li {
+	font-family: "HelveticalCondensed";
+	font-size: 18px;
+	color: #dce3e4;
+	text-transform: uppercase;
+	padding-left: 21px;
+	cursor: pointer;
+}
+nav li:not(:last-child)::after {
+	content: "/";
+	font-size: 18px;
+	color: #dce3e4;
+	padding-left: 21px;
+	vertical-align: middle;
+}
+nav li:hover {
+	color: #ffffff;
+}
+nav {
+	display: flex;
+	align-items: center;
+	margin-right: 8px;
+}
