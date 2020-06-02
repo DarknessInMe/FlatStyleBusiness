@@ -1,0 +1,28 @@
+/* Обнуление стилей */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+/* Подключение шрифтов */
+@font-face {
+	font-family: "HelveticalLight";
+	src: url(../fonts/HelveticaLTStd-Light.ttf);
+}
+@font-face {
+	font-family: "HelveticalBold";
+	src: url(../fonts/Helvetica-LT-Std-Bold_22473.ttf);
+}
+@font-face {
+	font-family: "HelveticalRoman";
+	src: url(../fonts/HelveticaLTStd-Roman.otf);
+}
+@font-face {
+	font-family: "HelveticalCondensed";
+	src: url(../fonts/HelveticaLTCondensedRegular.ttf);
+}
+@font-face {
+	font-family: "CherrySwash";
+	src: url(../fonts/CherrySwash-Regular.otf);
+}
