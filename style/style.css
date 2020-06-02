@@ -4,7 +4,9 @@
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
+	text-decoration: none;
 }
+
 /* Подключение шрифтов */
 @font-face {
 	font-family: "HelveticalLight";
@@ -34,6 +36,8 @@
 .container {
 	max-width: 986px;
 	margin: 0 auto;
+	position: relative;
+	z-index: 1;
 }
 .row {
 	display: flex;
@@ -44,7 +48,9 @@
 	flex-direction: column;
 }
 /* Header */
-header {
+.page-header {
+	position: relative;
+	z-index: 1;
 	background-color: #4c97a2;
 }
 .header-row .logo {
@@ -57,7 +63,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 }
-nav li {
+.page-nav li {
 	font-family: "HelveticalCondensed";
 	font-size: 18px;
 	color: #dce3e4;
@@ -65,18 +71,55 @@ nav li {
 	padding-left: 21px;
 	cursor: pointer;
 }
-nav li:not(:last-child)::after {
+.page-nav li:not(:last-child)::after {
 	content: "/";
 	font-size: 18px;
 	color: #dce3e4;
 	padding-left: 21px;
 	vertical-align: middle;
 }
-nav li:hover {
+.page-nav li:hover {
 	color: #ffffff;
 }
-nav {
+.page-nav {
 	display: flex;
 	align-items: center;
 	margin-right: 8px;
+}
+/* Main */
+
+main .main-bg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/Sea.jpg) no-repeat;
+	background-size: cover;
+}
+main .title {
+	text-transform: uppercase;
+	font-size: 44px;
+	color: #e4e4e4;
+	font-family: "HelveticalBold";
+	text-align: center;
+	width: 50%;
+}
+.column {
+	border: 2px solid red;
+}
+/* main .main-content {
+	display: flex;
+} */
+main .main-button {
+	font-family: "HelveticalLight";
+	font-size: 30px;
+	color: #e4e4e4;
+	padding: 10px 45px 10px 45px;
+}
+main .button-body {
+	border: 3px solid #e4e4e4;
+	border-radius: 5px;
+	display: inline-block;
 }
