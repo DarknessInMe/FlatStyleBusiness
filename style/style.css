@@ -50,26 +50,26 @@
 }
 
 /* Header */
-.page-header {
+header {
 	position: relative;
 	z-index: 1;
 	background-color: #4c97a2;
 }
-.page-header .header-row .wrapper {
+header .header-row .wrapper {
 	font-family: "CherrySwash";
 	padding: 27px 16px 27px 16px;
 }
-.page-header .header-row .logo {
+header .header-row .logo {
 	color: #ffffff;
 	font-size: 40px;
 	font-family: "CherrySwash";
 }
 
-.page-header .header-row {
+header .header-row {
 	display: flex;
 	justify-content: space-between;
 }
-.page-header .page-nav li {
+header .page-nav li {
 	font-family: "HelveticalCondensed";
 	font-size: 18px;
 	color: #dce3e4;
@@ -77,30 +77,30 @@
 	padding-left: 21px;
 	cursor: pointer;
 }
-.page-header .page-nav li:not(:last-child)::after {
+header .page-nav li:not(:last-child)::after {
 	content: "/";
 	font-size: 18px;
 	color: #dce3e4;
 	padding-left: 21px;
 	vertical-align: middle;
 }
-.page-header .page-nav li:hover {
+header .page-nav li:hover {
 	color: #ffffff;
 }
-.page-header .page-nav {
+header .page-nav {
 	display: flex;
 	align-items: center;
 	margin-right: 8px;
 }
 
 @media (max-width: 767px) {
-	.page-header .header-row nav {
+	header .header-row nav {
 		display: none;
 	}
-	.page-header .header-row .logo {
+	header .header-row .logo {
 		font-size: 30px;
 	}
-	.page-header .header-row .wrapper {
+	header .header-row .wrapper {
 		padding: 20px 13px 20px 13px;
 	}
 }
