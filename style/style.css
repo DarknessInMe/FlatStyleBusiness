@@ -200,7 +200,7 @@ main ul.slider-status {
 	color: #4c505d;
 	font-family: "HelveticalLight";
 	text-align: center;
-	margin-top: 75px;
+	padding-top: 75px;
 }
 .lorem-content .subtitle {
 	width: 90%;
@@ -208,14 +208,14 @@ main ul.slider-status {
 	font-size: 14px;
 	font-family: "HelveticalRoman";
 	text-align: center;
-	margin-top: 45px;
+	padding-top: 45px;
 }
 
 .lorem-content ul.icons {
 	width: 40%;
 	display: flex;
 	justify-content: space-between;
-	margin: 65px 0px 75px 0px;
+	padding: 65px 0px 75px 0px;
 }
 .lorem-content ul.icons .icon-item {
 	max-width: 100%;
@@ -223,25 +223,87 @@ main ul.slider-status {
 
 @media (min-width: 768px) and (max-width: 991px) {
 	.lorem-content .lorem-title {
-		margin-top: 50px;
+		padding-top: 50px;
 	}
 	.lorem-content ul.icons {
-		margin: 50px 0px;
+		padding: 50px 0px;
 	}
 }
 
 @media (max-width: 767px) {
 	.lorem-content .lorem-title {
-		margin-top: 30px;
+		padding-top: 30px;
 	}
 	.lorem-content ul.icons {
 		width: 70%;
-		margin: 35px 10px 30px 10px;
+		padding: 35px 10px 30px 10px;
 	}
 	.lorem-content .subtitle {
-		margin-top: 30px;
+		padding-top: 30px;
 	}
 }
+
+/*  Третий main section */
+.quote-container {
+	background-color: #00d089;
+}
+.quote-content {
+	display: flex;
+	align-items: center;
+}
+.quote-container .quote-block {
+	padding-top: 95px;
+	display: flex;
+	flex-direction: row;
+}
+.quote-container .quote-block .avatar {
+	object-fit: cover;
+	height: 173px;
+	width: 173px;
+}
+.quote-container .quote-block .quote-jail {
+	display: flex;
+	justify-content: center;
+	margin-left: 40px;
+}
+.quote-container .quote-block .name {
+	text-transform: uppercase;
+	font-size: 26px;
+	font-family: "HelveticalBold";
+	color: #fff;
+	margin-bottom: 15px;
+}
+.quote-container .lorem-text {
+	width: 95%;
+	text-align: center;
+	color: #ffffff;
+	font-size: 18px;
+	font-family: "HelveticalLight";
+	line-height: 1.5;
+	padding: 60px 10px 95px 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.quote-container .quote-block {
+		padding-top: 50px;
+	}
+	.quote-container .lorem-text {
+		padding: 45px 10px 55px 10px;
+	}
+}
+
+@media (max-width: 767px) {
+	.quote-container .quote-block {
+		padding-top: 30px;
+	}
+	.quote-container .lorem-text {
+		padding: 30px 10px 35px 10px;
+	}
+	.quote-container .quote-block .quote-jail {
+		display: none;
+	}
+}
+
 /* Footer */
 footer {
 	background-color: #00d089;
