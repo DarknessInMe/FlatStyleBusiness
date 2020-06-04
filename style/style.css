@@ -8,6 +8,7 @@
 	resize: none;
 	outline: none;
 	overflow: none;
+	outline-offset: 0;
 }
 
 /* Подключение шрифтов */
@@ -92,7 +93,7 @@ header .page-nav li.nav-item:hover {
 header .page-nav {
 	display: flex;
 	align-items: center;
-	margin-right: 8px;
+	margin-right: 16px;
 }
 
 @media (max-width: 767px) {
@@ -361,6 +362,18 @@ main ul.slider-status {
 	position: absolute;
 	bottom: 40px;
 }
+
+@media (max-width: 767px) {
+	.map-container .map-content {
+		border: none;
+		background-color: rgba(255, 255, 255, 0);
+		width: 100%;
+	}
+	.map-container {
+		height: 418px;
+	}
+}
+
 /* Footer */
 footer {
 	background-color: #00d089;
