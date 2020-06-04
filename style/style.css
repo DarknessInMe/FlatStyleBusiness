@@ -55,11 +55,10 @@ header {
 	z-index: 1;
 	background-color: #4c97a2;
 }
-header .header-row .wrapper {
-	font-family: "CherrySwash";
+header .header-row .logo {
 	padding: 27px 16px 27px 16px;
 }
-header .header-row .logo {
+header .header-row .logo .logo-item {
 	color: #ffffff;
 	font-size: 40px;
 	font-family: "CherrySwash";
@@ -69,7 +68,7 @@ header .header-row {
 	display: flex;
 	justify-content: space-between;
 }
-header .page-nav li {
+header .page-nav li.nav-item {
 	font-family: "HelveticalCondensed";
 	font-size: 18px;
 	color: #dce3e4;
@@ -77,14 +76,14 @@ header .page-nav li {
 	padding-left: 21px;
 	cursor: pointer;
 }
-header .page-nav li:not(:last-child)::after {
+header .page-nav li.nav-item:not(:last-child)::after {
 	content: "/";
 	font-size: 18px;
 	color: #dce3e4;
 	padding-left: 21px;
 	vertical-align: middle;
 }
-header .page-nav li:hover {
+header .page-nav li.nav-item:hover {
 	color: #ffffff;
 }
 header .page-nav {
@@ -98,13 +97,13 @@ header .page-nav {
 		display: none;
 	}
 	header .header-row .logo {
+		padding: 20px 16px 20px 16px;
+	}
+	header .header-row .logo .logo-item {
 		font-size: 30px;
 	}
-	header .header-row .wrapper {
-		padding: 20px 13px 20px 13px;
-	}
 }
-/* Main */
+/* Main обложка */
 
 main .main-bg {
 	width: 100%;
@@ -137,21 +136,26 @@ main .button-body {
 	border-radius: 5px;
 	padding: 10px 45px 10px 45px;
 	margin-top: 45px;
+	cursor: pointer;
+}
+main .button-body:hover {
+	border: 3px solid #fff;
+	color: #ffffff;
+	background-color: rgba(175, 177, 180, 0.2);
 }
 main .main-button {
 	font-family: "HelveticalLight";
 	font-size: 30px;
 	color: #e4e4e4;
 }
-main ul.row li {
+main ul.slider-status li {
 	width: 10px;
 	height: 10px;
 	background-color: #ffffff;
 	border-radius: 50%;
 	margin-left: 14px;
-	cursor: pointer;
 }
-main ul.row {
+main ul.slider-status {
 	position: absolute;
 	bottom: 20px;
 }
@@ -184,4 +188,73 @@ main ul.row {
 	main ul.row {
 		bottom: 10px;
 	}
+}
+/* Второй main section */
+.lorem-content {
+	display: flex;
+	align-items: center;
+}
+.lorem-content .lorem-title {
+	width: 65%;
+	font-size: 30px;
+	color: #4c505d;
+	font-family: "HelveticalLight";
+	text-align: center;
+	margin-top: 75px;
+}
+.lorem-content .subtitle {
+	width: 90%;
+	color: #4c505d;
+	font-size: 14px;
+	font-family: "HelveticalRoman";
+	text-align: center;
+	margin-top: 45px;
+}
+
+.lorem-content ul.icons {
+	width: 40%;
+	display: flex;
+	justify-content: space-between;
+	margin: 65px 0px 75px 0px;
+}
+.lorem-content ul.icons .icon-item {
+	max-width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.lorem-content .lorem-title {
+		margin-top: 50px;
+	}
+	.lorem-content ul.icons {
+		margin: 50px 0px;
+	}
+}
+
+@media (max-width: 767px) {
+	.lorem-content .lorem-title {
+		margin-top: 30px;
+	}
+	.lorem-content ul.icons {
+		width: 70%;
+		margin: 35px 10px 30px 10px;
+	}
+	.lorem-content .subtitle {
+		margin-top: 30px;
+	}
+}
+/* Footer */
+footer {
+	background-color: #00d089;
+}
+footer .footer-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+footer .footer-content > span {
+	font-size: 14px;
+	font-family: "HelveticalCondensed";
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 15px 0;
 }
