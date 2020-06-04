@@ -5,6 +5,9 @@
 	margin: 0;
 	list-style-type: none;
 	text-decoration: none;
+	resize: none;
+	outline: none;
+	overflow: none;
 }
 
 /* Подключение шрифтов */
@@ -303,7 +306,61 @@ main ul.slider-status {
 		display: none;
 	}
 }
+/* Map section */
+.map-container {
+	height: 518px;
+	width: 100%;
+	background: url("../images/map.jpg") no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+.map-container .map-content {
+	width: 435px;
+	height: 435px;
+	border-radius: 50%;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	background-color: rgba(255, 255, 255, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.map-container .map-content .form-body {
+	width: 70%;
+	position: relative;
+}
+
+.map-container .form-body .form-item {
+	border-radius: 0;
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	width: 100%;
+	font-family: "HelveticalLight";
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+.map-container .form-body .form-item:last-child {
+	height: 80px;
+}
+.map-container .form-body .form-item::placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+	font-family: "HelveticalLight";
+}
+.confirm {
+	border: none;
+	background: url("../images/check.png") no-repeat;
+	background-size: 100% 100%;
+	width: 65px;
+	height: 65px;
+	cursor: pointer;
+	position: absolute;
+	bottom: 40px;
+}
 /* Footer */
 footer {
 	background-color: #00d089;
