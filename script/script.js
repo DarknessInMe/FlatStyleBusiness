@@ -27,22 +27,24 @@ function startup() {
 		confirmBtn.classList.remove("confirm");
 		confirmBtn.classList.add("confirm-text-style");
 	}
-	let index = 1;
-	let arrayOfPhotos = [
-		"../Sea.jpg",
-		"../Sea1.jpg",
-		"../Sea2.jpg",
-		"../Sea3.jpg",
-		"../Sea4.jpg",
-	];
 
+	// let index = 0;
+	// let arrayOfPhotos = [
+	// 	"../images/Sea.jpg",
+	// 	"../images/Sea1.jpg",
+	// 	"../images/Sea2.jpg",
+	// 	"../images/Sea3.jpg",
+	// 	"../images/Sea4.jpg",
+	// ];
 	// let title = document.querySelector(".title");
 	// let sliderStatus = document.querySelectorAll(".slider-move");
-	setInterval(function () {
-		if (index == arrayOfPhotos.length) {
-			index = 0;
-		}
-		banner.style.backgroundImage = `url(${arrayOfPhotos[index]})`;
-		index += 1;
-	}, 2500);
+
+	// setInterval(function () {
+	// 	if (index == arrayOfPhotos.length) {
+	// 		index = 1;
+	// 	}
+
+	// 	index += 1;
+	banner.style.backgroundImage = `url(../images/Sea2.jpg)`;
+	// 	}, 2500);
 }
