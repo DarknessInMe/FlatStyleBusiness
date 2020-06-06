@@ -1,5 +1,5 @@
 window.addEventListener("resize", changeIcon);
-document.addEventListener("DOMContentLoaded", startup);
+window.addEventListener("load", startup);
 
 const banner = document.querySelector(".banner");
 const confirmBtn = document.querySelector("[data-find=confirm]");
