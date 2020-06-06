@@ -22,34 +22,35 @@ function changeIcon() {
 }
 
 function startup() {
-	// if (window.matchMedia("(max-width: 768px)").matches) {
-	// 	confirmBtn.textContent = "Confirm";
-	// 	confirmBtn.classList.remove("confirm");
-	// 	confirmBtn.classList.add("confirm-text-style");
-	// }
-	// let index = 1;
-	// let arrayOfPhotos = [
-	// 	"./images/Sea.jpg",
-	// 	"./images/Sea1.jpg",
-	// 	"./images/Sea2.jpg",
-	// 	"./images/Sea3.jpg",
-	// 	"./images/Sea4.jpg",
-	// ];
-	// let title = document.querySelector(".title");
-	// // let sliderStatus = document.querySelectorAll(".slider-move");
-	// setInterval(function () {
-	// 	if (index == arrayOfPhotos.length) {
-	// 		index = 0;
-	// 	}
-	// 	if (
-	// 		arrayOfPhotos[index] == "images/Sea2.jpg" ||
-	// 		arrayOfPhotos[index] == "images/Sea1.jpg"
-	// 	) {
-	// 		title.style.textShadow = "1px 1px 2px #000";
-	// 	} else {
-	// 		title.style.textShadow = "none";
-	// 	}
-	// banner.style.backgroundImage = `url(${arrayOfPhotos[index]})`;
-	// index += 1;
-	// }, 2500);
+	if (window.matchMedia("(max-width: 768px)").matches) {
+		confirmBtn.textContent = "Confirm";
+		confirmBtn.classList.remove("confirm");
+		confirmBtn.classList.add("confirm-text-style");
+	}
+	let index = 1;
+	let arrayOfPhotos = [
+		"/images/Sea.jpg",
+		"/images/Sea1.jpg",
+		"/images/Sea2.jpg",
+		"/images/Sea3.jpg",
+		"/images/Sea4.jpg",
+	];
+	// images
+	let title = document.querySelector(".title");
+	// let sliderStatus = document.querySelectorAll(".slider-move");
+	setInterval(function () {
+		if (index == arrayOfPhotos.length) {
+			index = 0;
+		}
+		// if (
+		// 	arrayOfPhotos[index] == "/images/Sea2.jpg" ||
+		// 	arrayOfPhotos[index] == "/images/Sea1.jpg"
+		// ) {
+		// 	title.style.textShadow = "1px 1px 2px #000";
+		// } else {
+		// 	title.style.textShadow = "none";
+		// }
+		banner.style.backgroundImage = `url(${arrayOfPhotos[index]})`;
+		index += 1;
+	}, 2500);
 }
