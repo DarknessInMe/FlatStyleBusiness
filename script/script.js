@@ -29,12 +29,13 @@ function startup() {
 	}
 	let index = 1;
 	let arrayOfPhotos = [
-		"/images/Sea.jpg",
-		"/images/Sea1.jpg",
-		"/images/Sea2.jpg",
-		"/images/Sea3.jpg",
-		"/images/Sea4.jpg",
+		"../images/Sea.jpg",
+		"../images/Sea1.jpg",
+		"../images/Sea2.jpg",
+		"../images/Sea3.jpg",
+		"../images/Sea4.jpg",
 	];
+
 	// images
 	let title = document.querySelector(".title");
 	// let sliderStatus = document.querySelectorAll(".slider-move");
@@ -54,3 +55,6 @@ function startup() {
 		index += 1;
 	}, 2500);
 }
+let test = document.querySelector("img");
+test.src = "../images/Sea4.jpg";
+document.querySelector("footer").after(test);
