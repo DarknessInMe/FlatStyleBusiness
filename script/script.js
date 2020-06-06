@@ -30,11 +30,11 @@ function startup() {
 
 	let index = 1;
 	let arrayOfPhotos = [
-		"/images/Sea.jpg",
-		"/images/Sea1.jpg",
-		"/images/Sea2.jpg",
-		"/images/Sea3.jpg",
-		"/images/Sea4.jpg",
+		"./images/Sea.jpg",
+		"./images/Sea1.jpg",
+		"./images/Sea2.jpg",
+		"./images/Sea3.jpg",
+		"./images/Sea4.jpg",
 	];
 	let title = document.querySelector(".title");
 	// let sliderStatus = document.querySelectorAll(".slider-move");
