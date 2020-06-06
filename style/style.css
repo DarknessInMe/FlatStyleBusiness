@@ -41,8 +41,6 @@
 .container {
 	max-width: 986px;
 	margin: 0 auto;
-	/* position: relative;
-	z-index: 1; */
 }
 .row {
 	display: flex;
@@ -109,7 +107,7 @@
 
 .banner {
 	width: 100%;
-	background-image: url(../images/Sea.jpg);
+	background-image: url(../images/Sea4.jpg);
 	background-size: cover;
 	transition: 0.2s linear;
 }
