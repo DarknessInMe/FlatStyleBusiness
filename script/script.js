@@ -29,32 +29,20 @@ function startup() {
 	}
 	let index = 1;
 	let arrayOfPhotos = [
-		"../images/Sea.jpg",
-		"../images/Sea1.jpg",
-		"../images/Sea2.jpg",
-		"../images/Sea3.jpg",
-		"../images/Sea4.jpg",
+		"../Sea.jpg",
+		"../Sea1.jpg",
+		"../Sea2.jpg",
+		"../Sea3.jpg",
+		"../Sea4.jpg",
 	];
 
-	// images
-	let title = document.querySelector(".title");
+	// let title = document.querySelector(".title");
 	// let sliderStatus = document.querySelectorAll(".slider-move");
 	setInterval(function () {
 		if (index == arrayOfPhotos.length) {
 			index = 0;
 		}
-		// if (
-		// 	arrayOfPhotos[index] == "/images/Sea2.jpg" ||
-		// 	arrayOfPhotos[index] == "/images/Sea1.jpg"
-		// ) {
-		// 	title.style.textShadow = "1px 1px 2px #000";
-		// } else {
-		// 	title.style.textShadow = "none";
-		// }
 		banner.style.backgroundImage = `url(${arrayOfPhotos[index]})`;
 		index += 1;
 	}, 2500);
 }
-let test = document.querySelector("img");
-test.src = "../images/Sea4.jpg";
-document.querySelector("footer").after(test);
