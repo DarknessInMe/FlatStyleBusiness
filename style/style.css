@@ -55,23 +55,23 @@
 }
 
 /* header */
-header {
+.header {
 	background-color: #4c97a2;
 }
-header .header-row .logo {
+.header .header-row .logo {
 	padding: 27px 16px;
 }
-header .header-row .logo .logo-item {
+.header .header-row .logo .logo-item {
 	color: #ffffff;
 	font-size: 40px;
 	font-family: "CherrySwash";
 }
 
-header .header-row {
+.header .header-row {
 	display: flex;
 	justify-content: space-between;
 }
-header .page-nav li.nav-item {
+.header .page-nav li.nav-item {
 	font-family: "HelveticalCondensed";
 	font-size: 18px;
 	color: #dce3e4;
@@ -79,30 +79,30 @@ header .page-nav li.nav-item {
 	padding-left: 21px;
 	cursor: pointer;
 }
-header .page-nav li.nav-item:not(:last-child)::after {
+.header .page-nav li.nav-item:not(:last-child)::after {
 	content: "/";
 	font-size: 18px;
 	color: #dce3e4;
 	padding-left: 21px;
 	vertical-align: middle;
 }
-header .page-nav li.nav-item:hover {
+.header .page-nav li.nav-item:hover {
 	color: #ffffff;
 }
-header .page-nav {
+.header .page-nav {
 	display: flex;
 	align-items: center;
 	margin-right: 16px;
 }
 
 @media (max-width: 767px) {
-	header .header-row nav {
+	.header .header-row nav {
 		display: none;
 	}
-	header .header-row .logo {
+	.header .header-row .logo {
 		padding: 20px 16px 20px 16px;
 	}
-	header .header-row .logo .logo-item {
+	.header .header-row .logo .logo-item {
 		font-size: 30px;
 	}
 }
@@ -110,8 +110,9 @@ header .page-nav {
 
 .banner {
 	width: 100%;
-	background: url(../images/Sea.jpg) no-repeat;
+	background-image: url(../images/Sea.jpg);
 	background-size: cover;
+	transition: 0.2s linear;
 }
 
 .banner-content .center-content {
@@ -168,7 +169,7 @@ header .page-nav {
 
 @media (max-width: 767px) {
 	.banner-content .center-content {
-		padding-top: 80px;
+		padding-top: 60px;
 		padding-bottom: 10px;
 	}
 	.banner-content .center-content .title {
@@ -181,7 +182,7 @@ header .page-nav {
 		margin-top: 25px;
 	}
 	.banner-content .center-content ul.slider-status {
-		margin-top: 99px;
+		margin-top: 80px;
 	}
 }
 
@@ -368,7 +369,16 @@ header .page-nav {
 	height: 65px;
 	cursor: pointer;
 }
-
+.confirm-text-style {
+	padding: 10px 20px;
+	border: none;
+	font-size: 20px;
+	font-family: "HelveticalLight";
+	color: #e4e4e4;
+	background: #00d089;
+	border-radius: 5px;
+	cursor: pointer;
+}
 @media (max-width: 767px) {
 	.map-section .map-wrap {
 		width: 100%;
@@ -388,8 +398,6 @@ header .page-nav {
 		border: none;
 		background-image: none;
 		background-color: #00d089;
-		width: 100px;
-		height: 100px;
 		cursor: pointer;
 	}
 }
