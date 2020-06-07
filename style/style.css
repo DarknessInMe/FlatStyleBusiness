@@ -37,13 +37,10 @@
 .wrap {
 	height: 100%;
 	width: 100%;
-	/* position: relative; */
 }
 .container {
 	max-width: 986px;
 	margin: 0 auto;
-	/* position: relative;
-	z-index: 1; */
 }
 .row {
 	display: flex;
@@ -110,9 +107,9 @@
 
 .banner {
 	width: 100%;
-	background-image: url(../images/Sea.jpg);
+	background-image: url(../images/banner/Sea1.jpg);
 	background-size: cover;
-	transition: 0.2s linear;
+	transition: 0.5s ease;
 }
 
 .banner-content .center-content {
@@ -129,6 +126,7 @@
 	font-family: "HelveticalBold";
 	text-align: center;
 	width: 60%;
+	text-shadow: 1px 1px 2px #000000;
 }
 .banner-content .center-content .button-body {
 	border: 3px solid #e4e4e4;
@@ -312,7 +310,7 @@
 /* Map section */
 .map-section {
 	width: 100%;
-	background: url("../images/map.jpg") no-repeat;
+	background: url("../images/main/map.jpg") no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
 	display: flex;
@@ -363,7 +361,7 @@
 }
 .form-body .btn-wrap .confirm {
 	border: none;
-	background: url("../images/check.png") no-repeat;
+	background: url("../images/main/check.png") no-repeat;
 	background-size: 100% 100%;
 	width: 65px;
 	height: 65px;
