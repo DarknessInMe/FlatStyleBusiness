@@ -166,6 +166,9 @@
 }
 
 @media (max-width: 767px) {
+	.banner {
+		background-image: url(../images/banner/sea_mobile.jpg);
+	}
 	.banner-content .center-content {
 		padding-top: 60px;
 		padding-bottom: 10px;
