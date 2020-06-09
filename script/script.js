@@ -1,3 +1,23 @@
+window.onload = function () {
+	let test = preloadImages(
+		"images/banner/Sea1.jpg",
+		"images/banner/Sea2.jpg",
+		"images/banner/Sea3.jpg",
+		"images/banner/Sea4.jpg",
+		"images/banner/Sea5.jpg"
+	);
+	startSlider(test);
+};
+
+function preloadImages(...arg) {
+	arg.forEach((image, index) => {
+		image = document.createElement("img");
+		image.src = preloadImages.arguments[index];
+		// console.log(image);
+	});
+	return arg;
+}
+
 document.addEventListener("DOMContentLoaded", checkMedia);
 
 const BANNER = document.querySelector(".banner");
@@ -9,9 +29,9 @@ const HIDDEN_NAME = document.querySelector("#hidden-name");
 function checkMedia() {
 	SCREEN.addListener(buttonTransform);
 	buttonTransform(SCREEN);
-	if (!SCREEN.matches) {
-		startSlider();
-	}
+	// if (!SCREEN.matches) {
+	// 	startSlider();
+	// }
 }
 
 function buttonTransform(SCREEN) {
@@ -34,27 +54,27 @@ function buttonTransform(SCREEN) {
 	}
 }
 
-function startSlider() {
+function startSlider(test) {
 	let index = 1;
-	const arrayOfPhotos = [
-		"images/banner/Sea1.jpg",
-		"images/banner/Sea2.jpg",
-		"images/banner/Sea3.jpg",
-		"images/banner/Sea4.jpg",
-		"images/banner/Sea5.jpg",
-	];
+	// const arrayOfPhotos = [
+	// 	"images/banner/Sea1.jpg",
+	// 	"images/banner/Sea2.jpg",
+	// 	"images/banner/Sea3.jpg",
+	// 	"images/banner/Sea4.jpg",
+	// 	"images/banner/Sea5.jpg",
+	// ];
 
 	let sliderStatus = document.querySelectorAll(".slider-move");
 	sliderStatus[0].classList.add("_selected");
 
 	const changes = setInterval(function () {
-		if (index == arrayOfPhotos.length) {
+		if (index == test.length) {
 			index = 0;
 		}
 		dropSliderStatus(sliderStatus);
 		sliderStatus[index].classList.add("_selected");
 
-		BANNER.style.backgroundImage = `url(${arrayOfPhotos[index]})`;
+		BANNER.style.backgroundImage = `url(${test[index]})`;
 
 		index += 1;
 	}, 2500);
