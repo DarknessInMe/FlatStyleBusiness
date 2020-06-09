@@ -16,22 +16,27 @@
 @font-face {
 	font-family: "HelveticalLight";
 	src: url(../fonts/HelveticaLTStd-Light.ttf);
+	font-display: swap;
 }
 @font-face {
 	font-family: "HelveticalBold";
 	src: url(../fonts/Helvetica-LT-Std-Bold_22473.ttf);
+	font-display: swap;
 }
 @font-face {
 	font-family: "HelveticalRoman";
 	src: url(../fonts/HelveticaLTStd-Roman.otf);
+	font-display: swap;
 }
 @font-face {
 	font-family: "HelveticalCondensed";
 	src: url(../fonts/HelveticaLTCondensedRegular.ttf);
+	font-display: swap;
 }
 @font-face {
 	font-family: "CherrySwash";
 	src: url(../fonts/CherrySwash-Regular.otf);
+	font-display: swap;
 }
 /* wrapper and templates */
 .wrap {
@@ -61,7 +66,7 @@
 .header .header-row .logo .logo-item {
 	color: #ffffff;
 	font-size: 40px;
-	font-family: "CherrySwash";
+	font-family: "CherrySwash", sans-serif;
 }
 
 .header .header-row {
@@ -69,7 +74,7 @@
 	justify-content: space-between;
 }
 .header .page-nav li.nav-item {
-	font-family: "HelveticalCondensed";
+	font-family: "HelveticalCondensed", sans-serif;
 	font-size: 18px;
 	color: #dce3e4;
 	text-transform: uppercase;
@@ -123,7 +128,7 @@
 	text-transform: uppercase;
 	font-size: 44px;
 	color: #e4e4e4;
-	font-family: "HelveticalBold";
+	font-family: "HelveticalBold", sans-serif;
 	text-align: center;
 	width: 60%;
 	text-shadow: 1px 1px 2px #000000;
@@ -135,9 +140,10 @@
 	margin-top: 45px;
 	cursor: pointer;
 	transition: 0.3s linear;
-	font-family: "HelveticalLight";
+	font-family: "HelveticalLight", sans-serif;
 	color: #e4e4e4;
 	font-size: 30px;
+	margin-bottom: 119px;
 }
 
 .banner-content .center-content .button-body:hover {
@@ -147,9 +153,6 @@
 	box-shadow: 0 0 10px #ffffff;
 }
 
-.banner-content .center-content ul.slider-status {
-	margin-top: 119px;
-}
 .banner-content .center-content ul.slider-status li {
 	width: 10px;
 	height: 10px;
@@ -157,11 +160,17 @@
 	border-radius: 50%;
 	margin-left: 14px;
 }
-
+._selected {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	box-shadow: 0px 0px 20px #fff;
+}
 @media (min-width: 768px) and (max-width: 991px) {
 	.banner-content .center-content {
 		padding-top: 100px;
 		padding-bottom: 20px;
+	}
+	.banner-content .center-content .button-body {
+		margin-bottom: 100px;
 	}
 }
 
@@ -170,8 +179,7 @@
 		background-image: url(../images/banner/sea_mobile.jpg);
 	}
 	.banner-content .center-content {
-		padding-top: 60px;
-		padding-bottom: 10px;
+		padding: 60px 0px;
 	}
 	.banner-content .center-content .title {
 		font-size: 28px;
@@ -181,9 +189,10 @@
 		font-size: 20px;
 		padding: 5px 25px;
 		margin-top: 25px;
+		margin-bottom: 0px;
 	}
 	.banner-content .center-content ul.slider-status {
-		margin-top: 80px;
+		display: none;
 	}
 }
 
@@ -200,14 +209,14 @@
 	width: 65%;
 	font-size: 30px;
 	color: #4c505d;
-	font-family: "HelveticalLight";
+	font-family: "HelveticalLight", sans-serif;
 	text-align: center;
 }
 .first-section .lorem-content .subtitle {
 	width: 90%;
 	color: #4c505d;
 	font-size: 14px;
-	font-family: "HelveticalRoman";
+	font-family: "HelveticalRoman", sans-serif;
 	text-align: center;
 	padding-top: 45px;
 }
@@ -275,16 +284,26 @@
 .quote-content .quote-block .name {
 	text-transform: uppercase;
 	font-size: 26px;
-	font-family: "HelveticalBold";
+	font-family: "HelveticalBold", sans-serif;
 	color: #fff;
 	margin-bottom: 15px;
 }
+
+._name-modified {
+	text-transform: uppercase;
+	font-size: 26px;
+	font-family: "HelveticalBold", sans-serif;
+	color: #fff;
+	margin-top: 15px;
+	text-align: center;
+}
+
 .quote-content .lorem-text {
 	width: 95%;
 	text-align: center;
 	color: #ffffff;
 	font-size: 18px;
-	font-family: "HelveticalLight";
+	font-family: "HelveticalLight", sans-serif;
 	line-height: 1.5;
 	padding: 60px 10px 0px 10px;
 }
@@ -313,7 +332,6 @@
 /* Map section */
 .map-section {
 	width: 100%;
-	background: url("../images/main/map.jpg") no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
 	display: flex;
@@ -344,7 +362,7 @@
 	padding: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	width: 100%;
-	font-family: "HelveticalLight";
+	font-family: "HelveticalLight", sans-serif;
 	color: #000000;
 	font-size: 14px;
 	margin-bottom: 15px;
@@ -355,7 +373,7 @@
 .map-section .form-body .form-item::placeholder {
 	color: rgba(0, 0, 0, 0.3);
 	font-size: 14px;
-	font-family: "HelveticalLight";
+	font-family: "HelveticalLight", sans-serif;
 }
 .map-section .form-body .btn-wrap {
 	display: flex;
@@ -374,7 +392,7 @@
 	padding: 10px 20px;
 	border: none;
 	font-size: 20px;
-	font-family: "HelveticalLight";
+	font-family: "HelveticalLight", sans-serif;
 	color: #e4e4e4;
 	background: #00d089;
 	border-radius: 5px;
@@ -413,7 +431,7 @@ footer .footer-content {
 }
 footer .footer-content > span {
 	font-size: 14px;
-	font-family: "HelveticalCondensed";
+	font-family: "HelveticalCondensed", sans-serif;
 	color: #ffffff;
 	text-transform: uppercase;
 	padding: 15px 0;

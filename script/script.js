@@ -1,27 +1,40 @@
-const banner = document.querySelector(".banner");
-const confirmBtn = document.querySelector("[data-find=confirm]");
-const screen = window.matchMedia("(max-width: 768px)");
+document.addEventListener("DOMContentLoaded", checkMedia);
 
-(function checkMedia() {
-	screen.addListener(buttonTransform);
-	buttonTransform(screen);
-})();
+const BANNER = document.querySelector(".banner");
+const CONFIRM_BTN = document.querySelector("[data-find=confirm]");
+const SCREEN = window.matchMedia("(max-width: 768px)");
+const QUOTE_BLOCK = document.querySelector(".quote-block");
+const HIDDEN_NAME = document.querySelector("#hidden-name");
 
-function buttonTransform(screen) {
-	if (screen.matches) {
-		confirmBtn.textContent = "Confirm";
-		confirmBtn.classList.remove("confirm");
-		confirmBtn.classList.add("confirm-text-style");
-	} else {
-		confirmBtn.textContent = "";
-		confirmBtn.classList.remove("confirm-text-style");
-		confirmBtn.classList.add("confirm");
-
-		startup();
+function checkMedia() {
+	SCREEN.addListener(buttonTransform);
+	buttonTransform(SCREEN);
+	if (!SCREEN.matches) {
+		startSlider();
 	}
 }
 
-function startup() {
+function buttonTransform(SCREEN) {
+	if (SCREEN.matches) {
+		CONFIRM_BTN.textContent = "Confirm";
+		CONFIRM_BTN.classList.remove("confirm");
+		CONFIRM_BTN.classList.add("confirm-text-style");
+
+		QUOTE_BLOCK.style.flexDirection = "column";
+		HIDDEN_NAME.textContent = "dhavan";
+		HIDDEN_NAME.classList.add("_name-modified");
+	} else {
+		CONFIRM_BTN.textContent = "";
+		CONFIRM_BTN.classList.remove("confirm-text-style");
+		CONFIRM_BTN.classList.add("confirm");
+
+		QUOTE_BLOCK.style.flexDirection = "row";
+		HIDDEN_NAME.textContent = "";
+		HIDDEN_NAME.classList.remove("_name-modified");
+	}
+}
+
+function startSlider() {
 	let index = 1;
 	const arrayOfPhotos = [
 		"images/banner/Sea1.jpg",
@@ -31,14 +44,57 @@ function startup() {
 		"images/banner/Sea5.jpg",
 	];
 
-	let title = document.querySelector(".title");
 	let sliderStatus = document.querySelectorAll(".slider-move");
+	sliderStatus[0].classList.add("_selected");
 
 	const changes = setInterval(function () {
 		if (index == arrayOfPhotos.length) {
 			index = 0;
 		}
-		banner.style.backgroundImage = `url(${arrayOfPhotos[index]})`;
+		dropSliderStatus(sliderStatus);
+		sliderStatus[index].classList.add("_selected");
+
+		BANNER.style.backgroundImage = `url(${arrayOfPhotos[index]})`;
+
 		index += 1;
 	}, 2500);
 }
+
+function dropSliderStatus(slider) {
+	slider.forEach((item) => {
+		item.classList.remove("_selected");
+	});
+}
+
+(function lazyLoad() {
+	let lazyImages = document.querySelectorAll("[data-load]");
+
+	const options = {
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.1,
+	};
+	const observer = new IntersectionObserver(handleLoad, options);
+
+	lazyImages.forEach((img) => {
+		observer.observe(img);
+	});
+
+	function handleLoad(myImg) {
+		myImg.forEach((myImgSingle) => {
+			if (myImgSingle.isIntersecting) {
+				loadImage(myImgSingle.target);
+			}
+		});
+	}
+
+	function loadImage(element) {
+		if (element.tagName == "SECTION") {
+			element.style.backgroundImage = `url(${element.getAttribute(
+				"data-load"
+			)})`;
+		} else {
+			element.src = element.getAttribute("data-load");
+		}
+	}
+})();

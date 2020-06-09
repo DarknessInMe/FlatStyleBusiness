@@ -98,11 +98,17 @@
 					<div class="container">
 						<div class="quote-content column">
 							<div class="quote-block">
-								<img src="images/main/avatar.png" alt="photo" class="avatar" />
+								<img
+									src=""
+									alt="photo"
+									class="avatar"
+									data-load="images/main/avatar.png"
+								/>
 								<div class="quote-jail column">
 									<span class="name">DHAVAN</span>
-									<img src="images/main/quote.png" alt="quote" />
+									<img src="" alt="quote" data-load="images/main/quote.png" />
 								</div>
+								<span id="hidden-name"></span>
 							</div>
 							<div class="lorem-text">
 								Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -115,28 +121,32 @@
 						</div>
 					</div>
 				</section>
-				<section class="map-section">
+				<section class="map-section" data-load="../images/main/map.jpg">
 					<div class="container">
 						<div class="map-wrap">
 							<div class="map-content column">
 								<div class="form-wrap">
 									<form class="form-body">
 										<input type="text" class="form-item" placeholder="Name" />
+
 										<input
 											type="text"
 											class="form-item"
 											placeholder="email adress"
 										/>
+
 										<textarea
 											name=""
 											class="form-item"
 											placeholder="Message"
 										></textarea>
+
 										<div class="btn-wrap">
 											<button
 												type="submit"
 												class="confirm"
 												data-find="confirm"
+												aria-label="send message"
 											></button>
 										</div>
 									</form>
