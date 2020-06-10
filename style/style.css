@@ -135,12 +135,12 @@
 .menu-burger-items {
 	width: 100%;
 	background-color: #4c97a2;
-	border-top: 1px solid #dce3e4;
+	border: none;
 	position: absolute;
 	z-index: 99999;
 	top: 80px;
 	display: none;
-	transition: height 0.5s ease;
+	transition: 0.5s ease;
 	height: 0px;
 	overflow: hidden;
 }
@@ -162,6 +162,7 @@
 ._show {
 	transition: height 0.5s ease;
 	height: 161px;
+	border-top: 1px solid #dce3e4;
 }
 
 @media (max-width: 767px) {
@@ -217,6 +218,9 @@
 	color: #e4e4e4;
 	font-size: 30px;
 	margin-bottom: 119px;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
 }
 
 .banner-content .center-content .button-body:hover {
@@ -248,9 +252,6 @@
 }
 
 @media (max-width: 767px) {
-	.banner {
-		background-image: url(../images/banner/sea_mobile.jpg);
-	}
 	.banner-content .center-content {
 		padding: 60px 0px;
 	}
