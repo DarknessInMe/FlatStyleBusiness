@@ -24,6 +24,11 @@ function preloadImages(...bgs) {
 	return bgs;
 }
 
+document.querySelector(".menu-burger").onclick = function () {
+	this.classList.toggle("_change");
+	this.nextElementSibling.classList.toggle("_show");
+};
+
 const BANNER = document.querySelector(".banner");
 const CONFIRM_BTN = document.querySelector("[data-find=confirm]");
 const QUOTE_BLOCK = document.querySelector(".quote-block");
