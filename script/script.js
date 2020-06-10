@@ -1,38 +1,33 @@
+const SCREEN = window.matchMedia("(max-width: 768px)");
+
 window.onload = function () {
-	let test = preloadImages(
-		"images/banner/Sea1.jpg",
-		"images/banner/Sea2.jpg",
-		"images/banner/Sea3.jpg",
-		"images/banner/Sea4.jpg",
-		"images/banner/Sea5.jpg"
-	);
-	startSlider(test);
+	SCREEN.addListener(buttonTransform);
+	buttonTransform(SCREEN);
+	if (!SCREEN.matches) {
+		let arrayOfPhotos = preloadImages(
+			"images/banner/Sea1.jpg",
+			"images/banner/Sea2.jpg",
+			"images/banner/Sea3.jpg",
+			"images/banner/Sea4.jpg",
+			"images/banner/Sea5.jpg"
+		);
+
+		startSlider(arrayOfPhotos);
+	}
 };
 
-function preloadImages(...arg) {
-	arg.forEach((image, index) => {
+function preloadImages(...bgs) {
+	bgs.forEach((image, index) => {
 		image = document.createElement("img");
-		image.src = preloadImages.arguments[index];
-		// console.log(image);
+		image.src = bgs[index];
 	});
-	return arg;
+	return bgs;
 }
-
-document.addEventListener("DOMContentLoaded", checkMedia);
 
 const BANNER = document.querySelector(".banner");
 const CONFIRM_BTN = document.querySelector("[data-find=confirm]");
-const SCREEN = window.matchMedia("(max-width: 768px)");
 const QUOTE_BLOCK = document.querySelector(".quote-block");
 const HIDDEN_NAME = document.querySelector("#hidden-name");
-
-function checkMedia() {
-	SCREEN.addListener(buttonTransform);
-	buttonTransform(SCREEN);
-	// if (!SCREEN.matches) {
-	// 	startSlider();
-	// }
-}
 
 function buttonTransform(SCREEN) {
 	if (SCREEN.matches) {
@@ -54,27 +49,20 @@ function buttonTransform(SCREEN) {
 	}
 }
 
-function startSlider(test) {
+function startSlider(arrayOfPhotos) {
 	let index = 1;
-	// const arrayOfPhotos = [
-	// 	"images/banner/Sea1.jpg",
-	// 	"images/banner/Sea2.jpg",
-	// 	"images/banner/Sea3.jpg",
-	// 	"images/banner/Sea4.jpg",
-	// 	"images/banner/Sea5.jpg",
-	// ];
 
 	let sliderStatus = document.querySelectorAll(".slider-move");
 	sliderStatus[0].classList.add("_selected");
 
 	const changes = setInterval(function () {
-		if (index == test.length) {
+		if (index == arrayOfPhotos.length) {
 			index = 0;
 		}
 		dropSliderStatus(sliderStatus);
 		sliderStatus[index].classList.add("_selected");
 
-		BANNER.style.backgroundImage = `url(${test[index]})`;
+		BANNER.style.backgroundImage = `url(${arrayOfPhotos[index]})`;
 
 		index += 1;
 	}, 2500);
