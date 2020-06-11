@@ -9,3 +9,5 @@ I realized that my skills grew. So I decided to refactor this layout from scratc
 + Lazy load;
 + Images preload;
 + JavaScript Media Queries; 
+
+GitHub Pages link: https://darknessinme.github.io/FlatStyleBusiness/
